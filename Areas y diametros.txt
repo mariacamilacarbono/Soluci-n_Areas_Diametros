@@ -1,0 +1,103 @@
+using System;
+
+public class FiguraGeometrica
+{
+    public virtual double CalcularArea()
+    {
+        return 0;
+    }
+
+    public virtual double CalcularDiametro()
+    {
+        return 0;
+    }
+}
+
+public class Circulo : FiguraGeometrica
+{
+    public double Radio { get; set; }
+
+    public Circulo(double radio)
+    {
+        Radio = radio;
+    }
+
+    public override double CalcularArea()
+    {
+        return Math.PI * Radio * Radio;
+    }
+
+    public override double CalcularDiametro()
+    {
+        return 2 * Radio;
+    }
+}
+
+public class Cuadrado : FiguraGeometrica
+{
+    public double Lado { get; set; }
+
+    public Cuadrado(double lado)
+    {
+        Lado = lado;
+    }
+
+    public override double CalcularArea()
+    {
+        return Lado * Lado;
+    }
+
+    public override double CalcularDiametro()
+    {
+        return Math.Sqrt(2) * Lado;
+    }
+}
+
+public class Rectangulo : FiguraGeometrica
+{
+    public double Base { get; set; }
+    public double Altura { get; set; }
+
+    public Rectangulo(double _base, double altura)
+    {
+        Base = _base;
+        Altura = altura;
+    }
+
+    public override double CalcularArea()
+    {
+        return Base * Altura;
+    }
+
+    public override double CalcularDiametro()
+    {
+        return Math.Sqrt(Math.Pow(Base, 2) + Math.Pow(Altura, 2));
+    }
+}
+
+
+public class Program
+{
+    public static void MostrarInformacion(FiguraGeometrica figura)
+    {
+        Console.WriteLine("Área: " + figura.CalcularArea());
+        Console.WriteLine("Diámetro: " + figura.CalcularDiametro());
+    }
+
+    public static void Main(string[] args)
+    {
+        FiguraGeometrica circulo = new Circulo(5);
+        FiguraGeometrica cuadrado = new Cuadrado(4);
+        FiguraGeometrica rectangulo = new Rectangulo(3, 4);
+
+        Console.WriteLine("Información del círculo:");
+        MostrarInformacion(circulo);
+
+        Console.WriteLine("Información del cuadrado:");
+        MostrarInformacion(cuadrado);
+
+        Console.WriteLine("Información del Rectangulo:");
+        MostrarInformacion(rectangulo);
+    }
+}
+
