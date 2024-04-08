@@ -1,0 +1,41 @@
+"Solución de las preguntas" 
+
+B. El polimorfismo es un concepto fundamental en la programación orientada a objetos que permite tratar a objetos de diferentes clases de manera uniforme, a traves de una interfaz común. tambien promueve la reutilizacion del codigo, la flexibilidad y la legibilidad del software
+
+C. Polimorfismo de Subtipos (Herencia): Permite a un objeto ser tratado como una instancia de su clase base, pero invocar métodos específicos de la clase derivada.
+
+Polimorfismo de Parámetros (Sobrecarga de Métodos): Permite definir varios métodos con el mismo nombre pero con diferentes parámetros, y el compilador selecciona el método adecuado en función de los argumentos proporcionados.
+
+D.La sobrecarga de funciones es una técnica en programación que permite definir múltiples funciones con el mismo nombre, pero con diferentes parámetros. Esto facilita la flexibilidad y la reutilización del código. 
+
+EJEMPLO:
+En este ejemplo se utiliza el mismo nombre para amabas funciones y lo unico que cambia es el tipo de dato en sus parametros.
+
+public class Matematicas {
+    public int Multiplicar(int a, int b) {
+        return a * b;
+    }
+
+    public double Multiplicar(double a, double b) {
+        return a * b;
+    }
+}
+
+
+E. La sobreescritura de métodos ocurre cuando una clase hija redefine un método que ya está definido en su clase padre, proporcionando una implementación específica para ese método en la clase hija.
+
+F. Beneficios del Polimorfismo en la Programación Orientada a Objetos (POO):
+
+Reutilización del Código: Permite escribir código genérico que puede funcionar con diferentes tipos de objetos.
+
+Flexibilidad: Facilita el diseño de sistemas más flexibles y adaptables.
+
+Legibilidad y Mantenibilidad: Promueve una estructura de código más clara y fácil de entender, lo que facilita el          mantenimiento y la escalabilidad del software.
+
+G. Ejemplos de Polimorfismo:
+
+Animales en un Zoológico: Todos los animales pueden hacer un sonido, pero el sonido específico varía según el tipo de animal.
+
+Vehículos en un Estacionamiento: Todos los vehículos pueden ser conducidos, pero el método de manejo varía según el tipo de vehículo (automóvil, motocicleta, bicicleta, etc.).
+
+Formas Geométricas en un Programa de Dibujo: Todas las formas pueden ser dibujadas, pero el método de dibujo varía según la forma (rectángulo, círculo, triángulo, etc.)
